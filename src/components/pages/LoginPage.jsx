@@ -2,12 +2,16 @@ import {useState} from 'react';
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 import {Link, useLocation} from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import { IntructionsModal } from '../IntructionsModal';
+
 
 export const LoginPage = () => {
 
     const {userName, updateUserName, isLoggedIn, setIsLoggedIn} = useContext(AppContext);
 
     const[text, setText] = useState('');
+    const[show, setShow] = useState(false);
 
     const handleLogin = () => {
         if (text.trim() === '') {
@@ -16,6 +20,7 @@ export const LoginPage = () => {
         setIsLoggedIn(true);
         updateUserName(text);
         setText('');
+        setShow(true);
     }
 
   return (
@@ -31,10 +36,12 @@ export const LoginPage = () => {
             className = 'userNameInput'
             value = {text}
             onChange = {(e) => {setText(e.target.value)}}/>
-            <button type = 'button' onClick={handleLogin} className = 'btn btn-success'>Log in</button>
+            <Button type = 'button' onClick={handleLogin} className = 'btn btn-success'>Log in</Button>
             
         </div>)}
+        <IntructionsModal show = {show} setShow = {setShow} userName = {userName}/>
         
     </div>
   )
 }
+
