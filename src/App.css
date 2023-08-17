@@ -1,0 +1,237 @@
+
+.App {
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  background-color: #eaf7e6;
+  height: 100vh;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background-color: #eaf7e6;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 7% 20% 0 20%;
+}
+
+.buttonContainer button, .yourBoard button {
+  margin: 3% 0 0 0;
+  font-size: 1.3rem;
+  background-color: white;
+  border-radius: 4px;
+  padding: 6px;
+  border: 1px solid black;
+  font-family: 'Roboto Slab', serif;
+  background-color: #f4ca43;
+
+}
+
+.buttonContainer button:hover, .yourBoard button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: #cea939;
+}
+
+.letter {
+  border-radius: 3px;
+  border: 1px solid black;
+  background-color: white;
+  margin: 5px;
+  font-size: 2rem;
+  width: 46px;
+  height: 50px;
+  font-family: 'Roboto Slab', serif;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: #ecd3b8;
+}
+
+.letter:hover {
+  background-color: #c9b39b;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.inactiveWordContainer {
+  display: flex;
+  margin: 1%;
+
+}
+
+.activeWordContainer {
+  display: flex;
+  margin: 1%;
+
+}
+
+
+.yourBoard {
+  margin: 3% 10% 5% 10%;
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  padding: 0 3% 3% 3%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: #c9f7b7;
+
+}
+
+.yourBoardContainer {
+  display: flex;
+  justify-content: center;
+}
+
+#boardLetter {
+  border-radius: 3px;
+  border: 1px solid black;
+  margin-bottom: 12%;
+  font-size: 2rem;
+  width: 42px;
+  height: 46px;
+  padding: 1.5px;
+  font-family: 'Roboto Slab', serif;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: #ecd3b8;
+}
+
+#boardLetter:hover {
+  background-color: #c9b39b;
+  border-color: red;
+  color: red;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.myWordsContainer {
+  margin: 0 5% 0 5%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.wordLetter, .inactiveWordLetter {
+  border-radius: 3px;
+  border: 1px solid black;
+  font-size: 2rem;
+  width: 42px;
+  height: 46px;
+  padding: 1.5px;
+  font-family: 'Roboto Slab', serif;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: #ecd3b8;
+}
+
+.inactiveWordLetter {
+  opacity: 0.5;
+}
+
+.wordLetter:hover {
+  background-color: #c9b39b;
+  transform: scale(1.1);
+  cursor: pointer; 
+}
+
+.activeWordLetter {
+  border-radius: 3px;
+  border: 1px solid black;
+  margin-bottom: 12%;
+  font-size: 2rem;
+  width: 42px;
+  height: 46px;
+  padding: 1.5px;
+  font-family: 'Roboto Slab', serif;
+  box-shadow: 0 0 15px yellow;
+  background-color: #ecd3b8;
+}
+
+.activeWordLetter:hover {
+  background-color: #c9b39b;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.boardButtons {
+  display: flex;
+  font-family: 'Roboto Slab', serif;
+}
+
+.boardButtons button {
+  margin: 4% 4% 0 4%;
+  white-space: nowrap;
+}
+
+.pointContainer {
+  position: fixed;
+  bottom: 0;
+  border: 1px solid black;
+  font-size: 1.5rem;
+  padding: 1%;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: #c9f7b7;
+  opacity: 0.9;
+}
+
+.userNameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userNameContainer input, .userNameContainer button {
+  width: 20%;
+  margin-top: 10px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.navContainer {
+  position: fixed;
+  width: 100vw;
+  opacity: 0.9;
+  top: 0;
+}
+
+.header {
+  margin-top: 60px;
+}
+
+
